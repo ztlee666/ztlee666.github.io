@@ -1,0 +1,152 @@
+// @use './variable' as *;
+@import './variable';
+
+*{
+    scrollbar-color: transparent;
+    scrollbar-width: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar{
+    width: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background: $dark;
+}
+
+::selection{
+    background: $cold;
+    color: $light;
+}
+
+body{
+    background: $dark;
+    cursor: url('../img/cursor.png'), auto;
+}
+
+#cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid $cold;
+    border-radius: 50%;
+    top: -11px;
+    left: -12px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 15;
+}
+
+.line{
+    width: 100vw;
+    height: 2px;
+    background: linear-gradient(to right, transparent 0%, $cold 45%, $cold 55%,  transparent 100%);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.line-1{
+        top: 10vh;
+    }
+    &.line-2{
+        bottom: 10vh;
+    }
+    &.line-3{
+        width: 90%;
+        top: 8%;
+    }
+    &.line-4{
+        width: 90%;
+        bottom: 2%;
+    }
+    &.line-5{
+        width: 90%;
+        bottom: 0%;
+    }
+    &.line-6{
+        width: 90%;
+        bottom: 4%;
+    }
+    &.line-7{
+        width: 90%;
+        top: 0%;
+    }
+    &.line-8{
+        width: 95%;
+        top: 0%;
+    }
+    &.line-vertical{
+        height: 80vh;
+        width: 2px;
+        background: linear-gradient(to bottom, transparent 0%, $cold 45%, $cold 55%,  transparent 100%);
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 450px){
+    .line{
+        &.line-4{
+            bottom: 7%;
+        }
+        &.line-vertical{
+            height: 70vh;
+        }
+    }
+}
+
+.white-line{
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    right: 0px;
+    background: linear-gradient(to bottom, transparent 0%, $light 45%, $light 55%,  transparent 100%);
+}
+
+#hm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $dark;
+    display: none;
+    z-index: 20;
+
+    #hmp{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Oswald';
+        font-size: 18px;
+        font-weight: lighter;
+        color: $light;
+        letter-spacing: 1px;
+    }
+}
+
+#preloader-blue, #preloader-black{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: none !important;
+}
+#preloader-blue{
+    background: $cold;
+    z-index: 1998;
+}
+#preloader-black{
+    background: $dark;
+    z-index: 1999;
+}

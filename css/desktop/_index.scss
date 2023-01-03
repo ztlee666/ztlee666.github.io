@@ -1,0 +1,34 @@
+@import './1-header-desktop';
+@import './2-about-desktop';
+@import './3-skill-desktop';
+@import './4-work-desktop';
+@import './5-footer-desktop';
+@import './6-projectbox-desktop';
+
+//ultra big screen
+@media (min-width: 1079px) {
+    #skill{
+        #skill-content{
+            .skill-box{
+                width: 14vw;
+                height: 20vh;
+
+                .skill-logo-wrapper{
+                    svg{
+                        width: 35%;
+                    }
+                }
+
+                .skill-text-wrapper{
+                    p{
+                        font-size: 1.2vw;
+                    }
+    
+                    span{
+                        font-size: 1vw;
+                    }
+                }
+            }
+        }
+    }
+}

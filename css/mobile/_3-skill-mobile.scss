@@ -1,0 +1,55 @@
+#skill{
+    min-height: 550px;
+
+    #skill-title{
+        width: 10%;
+
+        h2{
+            transform: rotate(-90deg);
+        }
+    }
+
+    #skill-content{
+        width: 90%;
+        padding: 10px 25px 30px 25px;
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+        align-items: center;
+
+        .skill-box{
+            width: 20vw;
+            margin: 1vh 1.3vw;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            .skill-logo-wrapper{
+                svg{
+                    width: 45%;
+
+                    &.wideimg{
+                        width: 65%;
+                    }
+                }
+            }
+
+            .skill-text-wrapper{
+                height: 65%;
+                p{
+                    font-size: 2.5vw;
+                    margin-top: 0px;
+                }
+    
+                span{
+                    font-size: 2.2vw;
+                    margin-top: 1px;
+                }
+            }
+        }
+
+        #skill-svg{
+            left: -55%;
+            bottom: 2%;
+            transform: rotate(-90deg) scale(.2);
+        }
+    }
+}
